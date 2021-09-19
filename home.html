@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microblog</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -12,7 +13,7 @@
     <header class="navbar">
         
         <div class="navbar__brand">
-            <img src="logo.svg" alt="The Microblog logo">Microblog
+            <img class="navbar__logo" src="logo.svg" alt="The Microblog logo">Microblog
         </div>
         <ul class="navbar__navigation">
             <li class="navbar__navigation-item"><a href="#" class="navbar__link">Recent</a></li>
@@ -21,33 +22,76 @@
 
     </header>
 
-    <main>
+    <main class="main">
 
         <section>
             <h1>Add new entry</h1>
+
+            <form class="form" action="/entry" method="POST">
+            
+                <p class="form__input">
+                    <label for="entry" class="form__label">Entry content:</label>
+                    <textarea name="content" id="entry" class="form__textarea"></textarea>
+                </p>
+
+                <button type="submit" class="form__submit">Add entry</button>
+            
+            </form>
+
         </section>
 
         <section>
 
             <h1>Recent posts</h1>
-            <article>
+            <article class="entry">
 
                 <div>
-                    <h2>A topic for the text content</h2>
-                    <time datetime="17-09-2021"> Sep 17</time>
+                    <h2 class="entry__title">A topic for the text content</h2>
+                    <time class="entry__date" datetime="17-09-2021">• Sep 17</time>
                 </div>
 
-                <p>Text content of the article</p>
+                <p class="entry__content">
+                    Text content of the article
+                </p>
 
             </article>
-
-            <article></article>
 
         </section>
 
     </main>
 
-    <footer></footer>
+    <footer class="footer">
+
+        <div class="footer__content">
+
+            <section class="left">
+
+                <a class="footer__item">Made by Vilius Kulinas</a>
+                <a class="footer__item">Check out my other project</a>
+
+            </section>
+
+            <section class="right">
+
+                <div class="footer__column">
+
+                    <a class="footer__item">Recent</a>
+                    <a class="footer__item">Calander</a>
+
+                </div>
+
+                <div class="footer__column">
+
+                    <a class="footer__item">About</a>
+                    <a class="footer__item">How this was made</a>
+
+                </div>
+                
+            </section>
+
+        </div>
+
+    </footer>
     
 </body>
 </html>
