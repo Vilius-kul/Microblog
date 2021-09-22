@@ -165,4 +165,7 @@ width: 100%;
     .navbar {
         display: block;
     }
+    .main {
+        max-width:fit-content;
+    }
 }
