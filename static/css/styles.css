@@ -160,3 +160,9 @@ width: 100%;
 .footer__item:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width:992px) {
+    .navbar {
+        display: block;
+    }
+}
