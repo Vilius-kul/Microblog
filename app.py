@@ -17,13 +17,13 @@ def create_app():
     def home():
         if request.method == 'POST':
             entry_content = request.form.get("content")
-            formatted_date = datetime.datetime.now().strftime("%d-%m-%Y %H:%M:%S")
+            formatted_date = datetime.datetime.utcnow().strftime("%d-%m-%Y %H:%M:%S")
             app.db.entries.insert({"content": entry_content, "date": formatted_date})
             
         entries_with_date = [
             (entry["content"],
             entry["date"],
-            datetime.datetime.strptime(entry["date"], "%d-%m-%Y %H:%M:%S").strftime("%b %d %H:%M")
+            datetime.datetime.strptime(entry["date"], "%d-%m-%Y %H:%M:%S").strftime("%b %d")
             )
             for entry in app.db.entries.find({}).sort("date", -1)
         ]        
