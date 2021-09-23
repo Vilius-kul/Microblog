@@ -1,3 +1,3 @@
 ## Microblog
 
-- First version of Microblog! https://vilius-microblog-app.herokuapp.com/ (only add new antry works at the moment)
+- First version of Microblog! https://vilius-microblog-app.herokuapp.com/ (only add new entry works at the moment)
