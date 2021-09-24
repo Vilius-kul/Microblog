@@ -30,5 +30,14 @@ def create_app():
         ]        
             
         return render_template("home.html", entries=entries_with_date)
+    
+    @app.route('/cv')
+    def test():
+        return render_template("cv.html")
+    
+    @app.route('/projects')
+    def projects():
+        return render_template("projects.html")
+    
         
     return app
